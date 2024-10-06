@@ -172,27 +172,28 @@ const animationTimeline = () => {
       "+=2"
     )
     // Animar las letras de "ENTONCES"
+// Animar las letras de "ENTONCES" más rápido
     .staggerFrom(
       ".idea-6 span",
-      0.8,
+      0.4,  // Reducido a 0.4 para que aparezcan más rápido
       {
         scale: 3,
         opacity: 0,
         rotation: 15,
         ease: Expo.easeOut
       },
-      0.2
+      0.1  // Intervalo reducido entre las letras
     )
     .staggerTo(
       ".idea-6 span",
-      0.8,
+      0.4,  // Reducido a 0.4 para que desaparezcan más rápido
       {
         scale: 3,
         opacity: 0,
         rotation: -15,
         ease: Expo.easeOut
       },
-      0.2,
+      0.1  // Intervalo reducido entre las letras
       "+=1"
     )
     .staggerFromTo(
