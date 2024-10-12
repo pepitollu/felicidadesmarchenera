@@ -109,9 +109,7 @@ body {
 }
 
 .idea-6 span {
-  font-size: 7rem; /* Tamaño de la letra */
-  margin: 0 5px;    /* Espacio entre las letras */
-  color: #ff69b4;   /* Color de las letras */
+  font-size: 15rem;
 }
 
 .six {
@@ -127,8 +125,9 @@ body {
 .six .hat {
   position: absolute;
   width: 80px;
-  top: 57px;
-  left: 33%;
+  top: 57px; 
+  left: 33%; 
+  /* transform: scale(0.1); */
 }
 
 .baloons img {
