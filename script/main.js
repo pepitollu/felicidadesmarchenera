@@ -1,9 +1,9 @@
-// Import the data to customize and insert them into the page
+// Import the data to customize and insert them into page
 const fetchData = () => {
   fetch("customize.json")
     .then(data => data.json())
     .then(data => {
-      let dataArr = Object.keys(data);
+      dataArr = Object.keys(data);
       dataArr.map(customData => {
         if (data[customData] !== "") {
           if (customData === "imagePath") {
@@ -16,27 +16,27 @@ const fetchData = () => {
         }
 
         // Check if the iteration is over
-        // Run animation if so
-        if (dataArr.length === dataArr.indexOf(customData) + 1) {
+        // Run amimation if so
+        if ( dataArr.length === dataArr.indexOf(customData) + 1 ) {
           animationTimeline();
-        }
+        } 
       });
     });
 };
 
 // Animation Timeline
 const animationTimeline = () => {
-  // Split chars that need to be animated individually
+  // Spit chars that needs to be animated individually
   const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
   const hbd = document.getElementsByClassName("wish-hbd")[0];
 
   textBoxChars.innerHTML = `<span>${textBoxChars.innerHTML
     .split("")
-    .join("</span><span>")}</span>`;
+    .join("</span><span>")}</span`;
 
   hbd.innerHTML = `<span>${hbd.innerHTML
     .split("")
-    .join("</span><span>")}</span>`;
+    .join("</span><span>")}</span`;
 
   const ideaTextTrans = {
     opacity: 0,
@@ -87,6 +87,7 @@ const animationTimeline = () => {
     .from(".three", 0.7, {
       opacity: 0,
       y: 10
+      // scale: 0.7
     })
     .to(
       ".three",
@@ -171,29 +172,27 @@ const animationTimeline = () => {
       },
       "+=2"
     )
-    // Animar las letras de "ENTONCES"
-// Animar las letras de "ENTONCES" más rápido
     .staggerFrom(
       ".idea-6 span",
-      0.4,  // Reducido a 0.4 para que aparezcan más rápido
+      0.8,
       {
         scale: 3,
         opacity: 0,
         rotation: 15,
         ease: Expo.easeOut
       },
-      0.1  // Intervalo reducido entre las letras
+      0.2
     )
     .staggerTo(
       ".idea-6 span",
-      0.4,  // Reducido a 0.4 para que desaparezcan más rápido
+      0.8,
       {
         scale: 3,
         opacity: 0,
         rotation: -15,
         ease: Expo.easeOut
       },
-      0.1  // Intervalo reducido entre las letras
+      0.2,
       "+=1"
     )
     .staggerFromTo(
@@ -233,6 +232,7 @@ const animationTimeline = () => {
       {
         opacity: 0,
         y: -50,
+        // scale: 0.3,
         rotation: 150,
         skewX: "30deg",
         ease: Elastic.easeOut.config(1, 0.5)
@@ -292,7 +292,10 @@ const animationTimeline = () => {
       "+=1"
     );
 
-  // Restart animation on click
+  // tl.seek("currentStep");
+  // tl.timeScale(2);
+
+  // Restart Animation on click
   const replyBtn = document.getElementById("replay");
   replyBtn.addEventListener("click", () => {
     tl.restart();
