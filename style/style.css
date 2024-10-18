@@ -38,7 +38,7 @@ body {
 }
 
 .one {
-  font-size: 4.5rem;
+  font-size: 3.5rem;
 }
 
 .one > img {
@@ -109,7 +109,7 @@ body {
 }
 
 .idea-6 span {
-  font-size: 15rem;
+  font-size: 6rem;
 }
 
 .six {
@@ -125,7 +125,7 @@ body {
 .six .hat {
   position: absolute;
   width: 80px;
-  top: 57px; 
+  top: 55px; 
   left: 33%; 
   /* transform: scale(0.1); */
 }
@@ -231,29 +231,32 @@ body {
   z-index: 3;
   cursor: pointer;
 }
-
+.six .lydia-dp {
+    border-radius: 15px; /* Ajusta el valor según el nivel de redondez que desees */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
 /* Media Queries */
 @media screen and (max-height: 1000px) {
   .six .hat {
-    left: 40%;
+    left: 28%;
   }
 }
 
 @media screen and (max-height: 800px) {
   .six .hat {
-    left: 37%;
+    left: 27%;
   }
 }
 
 @media screen and (max-height: 700px) {
   .six .hat {
-    left: 32%;
+    left: 14%;
   }
 }
 
 @media screen and (max-height: 850px) and (max-width: 450px) {
   .six .hat {
-    left: 32%;
+    left: 14%;
   }
 }
 
@@ -281,11 +284,11 @@ body {
 
   .six .hat {
     width: 50px;
-    top: -20px;
+    top: 55px;
   }
 
   .wish-hbd {
-    font-size: 2.2em;
+    font-size: 1.8em;
   }
 
   .wish h5 {
@@ -295,9 +298,5 @@ body {
   .nine p {
     font-size: 1.5rem;
     font-weight: lighter;
-  }
-  .six .lydia-dp {
-      border-radius: 15px; /* Ajusta el valor según el nivel de redondez que desees */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
   }
 }
